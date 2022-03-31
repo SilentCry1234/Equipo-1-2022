@@ -1,15 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class MainMenu : MonoBehaviour
 {
-    private void Start()
+    void Start()
     {
-        throw new NotImplementedException();
+        Scene scene = SceneManager.GetActiveScene();
+    }
+
+    void Update()
+    {
+        
     }
 
     public void StartGame()
@@ -17,4 +20,3 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 }
-
