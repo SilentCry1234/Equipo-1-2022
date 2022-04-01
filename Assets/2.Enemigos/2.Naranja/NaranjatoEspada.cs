@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ManzanaSiguiendoEspada : MonoBehaviour
+public class NaranjatoEspada : MonoBehaviour
 {
     public float velocidadenemiga;
     // Variable para guardar al jugador
     [SerializeField] Transform Personaje_principal = null;
-    void Start()
+    private void Start()
     {
-        //recuperamos al jugador gracias al Tag
-
+        
         Personaje_principal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
-    void Update() 
+    
+    void Update()
     {
 
         if (Personaje_principal == null)
