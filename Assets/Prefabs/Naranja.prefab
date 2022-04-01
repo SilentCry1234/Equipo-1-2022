@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b97bf4268d9b34fa508aa1835bd0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CuentaRegDestruir: 30
+  CuentaRegDestruir: 5
 --- !u!58 &-1839765007813155360
 CircleCollider2D:
   m_ObjectHideFlags: 0

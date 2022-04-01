@@ -12,7 +12,6 @@ public class DestruccionEnemigo : MonoBehaviour
         Destruccion();
 
     }
-}
 
     public void Destruccion()
     {
