@@ -7,10 +7,12 @@ public class DestruccionEnemigo : MonoBehaviour
     
     public float CuentaRegDestruir;
 
-    private void FixedUpdate()
+    private void Update()
     {
         Destruccion();
+
     }
+}
 
     public void Destruccion()
     {
