@@ -4,28 +4,33 @@ using UnityEngine;
 
 public class NaranjatoEspada : MonoBehaviour
 {
+    public ControladorPersonaje control;
     public float velocidadenemiga;
     // Variable para guardar al jugador
     [SerializeField] Transform Personaje_principal = null;
+
+
     private void Start()
     {
-        
+        control = FindObjectOfType<ControladorPersonaje>();
         Personaje_principal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
     
     void Update()
     {
-
-        if (Personaje_principal == null)
+        if (control.enmantel == false)
         {
-            return;
+
+            if (Personaje_principal == null)
+            {
+                return;
+            }
+
+            float fixedSpeed = velocidadenemiga * Time.deltaTime;
+
+            transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
+
+            transform.up = Personaje_principal.position - transform.position;
         }
-
-        float fixedSpeed = velocidadenemiga * Time.deltaTime;
-
-        transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
-
-        transform.up = Personaje_principal.position - transform.position;
-
     }
 }

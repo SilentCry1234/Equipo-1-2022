@@ -8,6 +8,7 @@ public class ControladorPersonaje : MonoBehaviour
     [Space]
     public string nombre;
     public float speed;
+    public bool enmantel;
 
     public static ControladorPersonaje instace; 
 
@@ -22,5 +23,21 @@ public class ControladorPersonaje : MonoBehaviour
             Destroy(instace.gameObject);
             instace = this; 
         }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mantel"))
+        {
+            enmantel = true;
+            Debug.Log(enmantel);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mantel"))
+            enmantel = false;
+            Debug.Log(enmantel);
     }
 }

@@ -6,36 +6,38 @@ public class Life : MonoBehaviour
 {
     public static int vidas = 3;
     public int vidaa;
-    public bool recibirdaño = true;
+    public bool recibirdaño;
+    public float time;
     private void Update()
     {
-        vidaa = vidas;
+        if(recibirdaño == false)
+        {
+            Timer();
+        } 
+
+        if (time >= 3f)
+        {
+            recibirdaño = true;
+            time = 0f;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-      if (!recibirdaño)
-      {
-            return;
-      }
-      if (collision.CompareTag("Enemigo"))
-      {
-            recibirdaño = false;
-            Invoke("Impacto", 1);
-            vidas -= 1;
-      }
-      if (Contenedorr.contenedores != null)
+        if (recibirdaño == true)
         {
-            Contenedorr.contenedores.ReducirVida();
+            if (collision.gameObject.CompareTag("Enemigo"))
+            {
+                vidas -= 1;
+                Contenedorr.contenedores.ReducirVida();
+            }
         }
-        //if (vidas <= 0)
-        //{
-        // agregar codigo de GAME OVER 
-        //}
+        recibirdaño = false;
     }
 
-    void Impacto()
+    public void Timer()
     {
-        recibirdaño = true;
+        time += Time.deltaTime;
     }
+
 }
