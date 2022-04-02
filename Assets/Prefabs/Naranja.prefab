@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7138183978086319214}
   m_Layer: 0
   m_Name: Naranja
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 746d593c5c2fc0e4ca56e7c186c5475b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  control: {fileID: 0}
   velocidadenemiga: 2
   Personaje_principal: {fileID: 0}
 --- !u!114 &6455040821466639920
