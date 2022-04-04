@@ -12,8 +12,8 @@ public class SpawnearEnemigos : MonoBehaviour
     [Space]
     [Header("Demoras entre disparos")]
     public float delaySpawn = 5f;
-    public float delayRonda = 15f;
-    private float proxRonda = 0.0f;
+    //public float delayRonda = 15f;
+    //private float proxRonda = 0.0f;
     private float proximoSpawn = 0.0f;
     
     private void Update()
@@ -23,13 +23,13 @@ public class SpawnearEnemigos : MonoBehaviour
         {
             SpawnearSeguido();
         }
-        else
+        /*else
         {
             if (Time.time > proxRonda)
             {
                 SpawnearRonda();
             }
-        }
+        }*/
 
     }
     public void SpawnearSeguido()
@@ -40,7 +40,7 @@ public class SpawnearEnemigos : MonoBehaviour
         //Y que los proyectiles spawneen segun la posición y rotación de su Spawn
         Instantiate(gameEnemie, spawn.transform.position, spawn.transform.rotation);
     }
-    public void SpawnearRonda()
+    /*public void SpawnearRonda()
     {
 
         proxRonda = Time.time + delayRonda;
@@ -48,5 +48,5 @@ public class SpawnearEnemigos : MonoBehaviour
         proximoSpawn = Time.time + delaySpawn;
 
 
-    }
+    }*/
 }
