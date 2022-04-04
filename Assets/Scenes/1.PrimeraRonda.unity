@@ -451,9 +451,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEnemie: {fileID: 3155469423300574113, guid: 169ea555495ef534b9aa71509efa25cb, type: 3}
   spawn: {fileID: 785761359}
-  tiempo: 10
+  tiempo: 1000
   delaySpawn: 5
-  delayRonda: 30
 --- !u!4 &785761361
 Transform:
   m_ObjectHideFlags: 0
@@ -547,7 +546,6 @@ MonoBehaviour:
   spawn: {fileID: 1111420150}
   tiempo: 5
   delaySpawn: 5
-  delayRonda: 30
 --- !u!4 &1111420152
 Transform:
   m_ObjectHideFlags: 0
