@@ -66,6 +66,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -472,6 +473,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      swordDIE _7: 4510692079710510061
+      swordDIE _10: 8212793263093615631
+      swordDIE _1: 6821274442841121739
+      swordDIE _2: -5446923484345545761
+      swordDIE _3: -2220965409834422227
+      swordDIE _0: -446945528351663251
+      swordDIE _8: -7800898869091266432
+      swordDIE _6: -6192428373261979660
+      swordDIE _12: 6020628252086754017
+      swordDIE _9: 5472863565130186885
+      swordDIE _13: -135286475227316048
+      swordDIE _4: 2143166694122606549
+      swordDIE _11: -9164927156561402423
+      swordDIE _5: -4565488095786934091
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

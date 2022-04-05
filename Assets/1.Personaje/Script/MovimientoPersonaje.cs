@@ -51,6 +51,15 @@ public class MovimientoPersonaje : MonoBehaviour
             Animator.SetBool("Camina para atras", false);
         }
 
+        if(Input.GetKey(KeyCode.W))
+        {
+            Animator.SetBool("Camina de frente", true);
+        }
+        else
+        {
+            Animator.SetBool("Camina de frente", false);
+        }
+
 
     }
 }
