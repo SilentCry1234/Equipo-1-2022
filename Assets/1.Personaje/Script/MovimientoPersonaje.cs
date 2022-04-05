@@ -14,16 +14,23 @@ public class MovimientoPersonaje : MonoBehaviour
 
     //Componentes
     private Rigidbody2D rg2D;
+    private Animator Animator;
 
     void Start()
     {
         Velocidad = ControladorPersonaje.instace.speed;
         rg2D = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
+    }
+    private void Update()
+    {
+
     }
 
     private void FixedUpdate()
     {
         movimiento();
+        animaciones();
     }
     private void movimiento()
     {
@@ -31,6 +38,19 @@ public class MovimientoPersonaje : MonoBehaviour
         Vertical = Input.GetAxisRaw("Vertical");
 
         rg2D.velocity = new Vector2(Horizontal * Velocidad, Vertical * Velocidad);
+    }
+
+    private void animaciones()
+    {
+        if (Input.GetKey(KeyCode.S))
+        {
+            Animator.SetBool("Camina para atras", true); 
+        }
+        else
+        {
+            Animator.SetBool("Camina para atras", false);
+        }
+
 
     }
 }
