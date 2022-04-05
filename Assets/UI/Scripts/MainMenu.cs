@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public Button playGame;
-    public Button options;
+    public Button creditos;
     public Button quit;
 
     void Start()
