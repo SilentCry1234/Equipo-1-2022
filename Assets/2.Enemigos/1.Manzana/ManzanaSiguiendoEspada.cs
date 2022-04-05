@@ -5,6 +5,7 @@ using UnityEngine;
 public class ManzanaSiguiendoEspada : MonoBehaviour
 {
     public float velocidadenemiga;
+    public float velocidadDeRotacion; 
     // Variable para guardar al jugador
     [SerializeField] Transform Personaje_principal = null;
     void Start()
@@ -25,7 +26,6 @@ public class ManzanaSiguiendoEspada : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
 
-        transform.up = Personaje_principal.position - transform.position;
-
+        transform.Rotate(Vector3.back * velocidadDeRotacion, Space.Self);
     }
 }

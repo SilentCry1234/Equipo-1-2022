@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidadenemiga: 1
+  velocidadDeRotacion: 0.2
   Personaje_principal: {fileID: 0}
 --- !u!114 &6335820736723863167
 MonoBehaviour:
