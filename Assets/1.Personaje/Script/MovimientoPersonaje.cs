@@ -22,10 +22,6 @@ public class MovimientoPersonaje : MonoBehaviour
         rg2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
     }
-    private void Update()
-    {
-
-    }
 
     private void FixedUpdate()
     {
@@ -60,6 +56,22 @@ public class MovimientoPersonaje : MonoBehaviour
             Animator.SetBool("Camina de frente", false);
         }
 
+        if (Input.GetKey(KeyCode.A))
+        {
+            Animator.SetBool("Camina izquierda", true);
+        }
+        else
+        {
+            Animator.SetBool("Camina izquierda", false);
+        }
 
+        if (Input.GetKey(KeyCode.D))
+        {
+            Animator.SetBool("Camina derecha", true);
+        }
+        else
+        {
+            Animator.SetBool("Camina derecha", false);
+        }
     }
 }
