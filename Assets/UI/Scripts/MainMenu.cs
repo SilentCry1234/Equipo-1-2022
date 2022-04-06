@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public Button playGame;
     public Button creditos;
     public Button quit;
+    public Button backToMenu;
 
     void Start()
     {
@@ -29,5 +30,9 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+    public void BackToMenu()
+    {
+        SceneManager.LoadScene(0);
     }
 }

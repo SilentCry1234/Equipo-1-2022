@@ -8,6 +8,9 @@ public class Life : MonoBehaviour
     public int vidaa;
     public bool recibirdaño;
     public float time;
+
+    public GameObject Lost;
+
     private void Update()
     {
         if(recibirdaño == false)
