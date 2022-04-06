@@ -30,7 +30,6 @@ public class ControladorPersonaje : MonoBehaviour
         if (collision.gameObject.CompareTag("Mantel"))
         {
             enmantel = true;
-            Debug.Log(enmantel);
         }
     }
 
@@ -38,6 +37,5 @@ public class ControladorPersonaje : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Mantel"))
             enmantel = false;
-        Debug.Log(enmantel);
     }
 }

@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    float time = 5f;
+    public Text tiempo;
+    float time = 30f;
     void Update()
     {
         Timer();
@@ -15,15 +17,14 @@ public class GameController : MonoBehaviour
     public void Timer()
     {
         time -= Time.deltaTime;
-        Debug.Log(time);
+        tiempo.text = "" + time.ToString("f0");
     }
 
     public void NextLevel()
     {
         if (time <= 0f)
         {
-            SceneManager.LoadScene("Ronda2");
-
+            SceneManager.LoadScene("Nivel 2");
         }
     }
 }
