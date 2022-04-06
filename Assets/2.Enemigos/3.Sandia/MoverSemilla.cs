@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovimientoSemilla : MonoBehaviour
+public class MoverSemilla : MonoBehaviour
 {
     public float speed;
 

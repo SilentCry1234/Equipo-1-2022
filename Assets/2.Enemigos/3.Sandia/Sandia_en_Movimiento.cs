@@ -8,7 +8,7 @@ public class Sandia_en_Movimiento : MonoBehaviour
     private float parado = 0f;
     public float limite;
     private float controlVel;
-    public float VelRotar = 0.5f;
+    //public float VelRotar = 0.5f;
     // Variable para guardar al jugador
     [SerializeField] Transform Personaje_principal = null;
     bool activarparado = false;
@@ -32,14 +32,14 @@ public class Sandia_en_Movimiento : MonoBehaviour
 
         float fixedSpeed = controlVel * Time.deltaTime;
 
-        Quaternion rotation = Quaternion.LookRotation(Personaje_principal.transform.position - transform.position, transform.TransformDirection(Vector3.up * VelRotar) * Time.deltaTime);
-        transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
+        //Quaternion rotation = Quaternion.LookRotation(Personaje_principal.transform.position - transform.position, transform.TransformDirection(Vector3.up * VelRotar) * Time.deltaTime);
+        //transform.rotation = new Quaternion(0, 0, rotation.z, rotation.w);
         transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
         if (dist <= limite)
         {
             activarparado = true;
-            Vector3 UbicacionTarget = Personaje_principal.position - transform.position;
-            Vector3.RotateTowards(transform.forward, UbicacionTarget, fixedSpeed, 0.0f);
+           // Vector3 UbicacionTarget = Personaje_principal.position - transform.position;
+           // Vector3.RotateTowards(transform.forward, UbicacionTarget, fixedSpeed, 0.0f);
         }
         else
         {

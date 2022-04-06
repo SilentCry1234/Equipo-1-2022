@@ -313,7 +313,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7786459, y: 1}
+    m_SensorSize: {x: 2.3353293, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -1849,7 +1849,6 @@ GameObject:
   - component: {fileID: 1404166663}
   - component: {fileID: 1404166662}
   - component: {fileID: 1404166661}
-  - component: {fileID: 1404166667}
   - component: {fileID: 1404166666}
   - component: {fileID: 1404166665}
   - component: {fileID: 1404166664}
@@ -1874,7 +1873,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocidadenemiga: 1
   limite: 3
-  VelRotar: 0.5
   Personaje_principal: {fileID: 1838425256}
 --- !u!212 &1404166662
 SpriteRenderer:
@@ -1956,7 +1954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44b97bf4268d9b34fa508aa1835bd0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CuentaRegDestruir: 0
+  CuentaRegDestruir: 30
 --- !u!70 &1404166665
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1989,24 +1987,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.99999994, y: 1}
   m_Direction: 0
---- !u!114 &1404166667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404166660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e03ae0bb038d44c81bf21942fdf010, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  semillasobject: {fileID: 8125885900308953968, guid: c493c2e55ef73c14da3c44df18b6095f, type: 3}
-  spawn: {fileID: 1404166660}
-  Espada: {fileID: 1838425254}
-  distancia_deAct: 8
-  delaySpawn: 0.5
-  delayRonda: 2
 --- !u!1 &1575202477
 GameObject:
   m_ObjectHideFlags: 0
@@ -2542,6 +2522,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1950108298}
   - component: {fileID: 1950108299}
+  - component: {fileID: 1950108300}
   m_Layer: 0
   m_Name: SpawnSemillas
   m_TagString: Untagged
@@ -2556,8 +2537,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950108297}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: -0.06, z: 0.032569617}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.06, y: -0.06, z: 0}
   m_LocalScale: {x: 0.576535, y: 0.39826357, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2571,7 +2552,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1950108297}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22e03ae0bb038d44c81bf21942fdf010, type: 3}
   m_Name: 
@@ -2582,6 +2563,20 @@ MonoBehaviour:
   distancia_deAct: 8
   delaySpawn: 0.5
   delayRonda: 2
+--- !u!114 &1950108300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950108297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba247044a535d104e9da85da38e77607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VelRotar: 0.5
+  Personaje_principal: {fileID: 1838425254}
 --- !u!1 &2002242840
 GameObject:
   m_ObjectHideFlags: 0
