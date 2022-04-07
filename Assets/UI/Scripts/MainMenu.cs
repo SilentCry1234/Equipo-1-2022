@@ -11,6 +11,8 @@ public class MainMenu : MonoBehaviour
     public Button quit;
     public Button backToMenu;
 
+    public GameObject lost;
+
     void Start()
     {
         playGame.onClick.AddListener(StartGame);
@@ -34,5 +36,13 @@ public class MainMenu : MonoBehaviour
     public void BackToMenu()
     {
         SceneManager.LoadScene(0);
+        lost.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+        lost.SetActive(false);
+
     }
 }

@@ -6,28 +6,29 @@ public class Life : MonoBehaviour
 {
     public static int vidas = 3;
     public int vidaa;
-    public bool recibirdaño;
+    public bool takeDamage;
     public float time;
-
-    public GameObject Lost;
+    
+    public GameObject lost;
 
     private void Update()
     {
-        if(recibirdaño == false)
+        if(takeDamage == false)
         {
             Timer();
         } 
 
         if (time >= 3f)
         {
-            recibirdaño = true;
+            takeDamage = true;
             time = 0f;
         }
+        CheckLife();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (recibirdaño == true)
+        if (takeDamage == true)
         {
             if (collision.gameObject.CompareTag("Enemigo"))
             {
@@ -35,7 +36,7 @@ public class Life : MonoBehaviour
                 Contenedorr.contenedores.ReducirVida();
             }
         }
-        recibirdaño = false;
+        takeDamage = false;
     }
 
     public void Timer()
@@ -43,4 +44,11 @@ public class Life : MonoBehaviour
         time += Time.deltaTime;
     }
 
+    private void CheckLife()
+    {
+        if (vidas <= 0 )
+        {
+            lost.SetActive(true);            
+        }
+    }
 }
