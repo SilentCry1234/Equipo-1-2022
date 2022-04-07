@@ -26,6 +26,6 @@ public class ManzanaSiguiendoEspada : MonoBehaviour
 
         transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
 
-        transform.Rotate(Vector3.back * velocidadDeRotacion, Space.Self);
+        //transform.Rotate(Vector3.back * velocidadDeRotacion, Space.Self);
     }
 }

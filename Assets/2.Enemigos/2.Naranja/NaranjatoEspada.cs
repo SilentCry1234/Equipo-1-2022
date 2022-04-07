@@ -30,7 +30,7 @@ public class NaranjatoEspada : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, Personaje_principal.transform.position, fixedSpeed);
 
-            transform.up = Personaje_principal.position - transform.position;
+            //transform.up = Personaje_principal.position - transform.position;
         }
     }
 }

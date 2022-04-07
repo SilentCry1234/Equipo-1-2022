@@ -17,18 +17,21 @@ public class DispararSemillas : MonoBehaviour
     public float delayRonda = 15f;
     private float proxRonda = 0.0f;
     private float proximoSpawn = 0.0f;
+    [SerializeField] float tiempito;
 
     private void Start()
     {
-        Espada = FindObjectOfType<ControladorPersonaje>(); 
+        Espada = FindObjectOfType<ControladorPersonaje>();
+        
+        tiempito = 0f;
+       
     }
-
 
     void Update()
     {
-
+        tiempito = tiempito + Time.deltaTime;
         float dist = Vector3.Distance(Espada.transform.position, transform.position);
-        if (dist <= distancia_deAct && Time.time > proximoSpawn && Time.time >= 2.5f)
+        if (dist <= distancia_deAct && Time.time > proximoSpawn && tiempito >= 2.5f)
         {
             SpawnearSeguido();
         }
