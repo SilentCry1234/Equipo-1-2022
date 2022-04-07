@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class DestruccionEnemigo : MonoBehaviour
 {
-    
     public float CuentaRegDestruir;
 
     private void Update()
     {
         Destruccion();
-
     }
 
     public void Destruccion()
@@ -23,7 +21,6 @@ public class DestruccionEnemigo : MonoBehaviour
         if (collision.gameObject.GetComponent<ControladorPersonaje>())
         {
             Destroy(this.gameObject);
-
         }
     }
 }

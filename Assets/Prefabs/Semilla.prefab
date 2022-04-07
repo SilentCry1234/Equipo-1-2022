@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1156365768137677554}
   - component: {fileID: 5748385622869697143}
-  - component: {fileID: 8828735266608542042}
   - component: {fileID: 5262632348690643030}
   - component: {fileID: -2313790592997309297}
+  - component: {fileID: 1677912013440566907}
   m_Layer: 0
   m_Name: Semilla
   m_TagString: Enemigo
@@ -87,20 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!136 &8828735266608542042
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8125885900308953968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.50000006
-  m_Height: 1
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &5262632348690643030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f044902326bafff4495e7211bf734d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CuentaRegDestruir: 5
+  CuentaRegDestruir: 3
 --- !u!114 &-2313790592997309297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,3 +113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!70 &1677912013440566907
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8125885900308953968}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.0000001, y: 1}
+  m_Direction: 0

@@ -10,7 +10,6 @@ public class DestruirSemillas : MonoBehaviour
     private void Update()
     {
         Destruccion();
-
     }
 
     public void Destruccion()
@@ -18,13 +17,13 @@ public class DestruirSemillas : MonoBehaviour
         Destroy(this.gameObject, CuentaRegDestruir);
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Chocando");
-        if (collision.CompareTag("Player"))
+
+        if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
-            
         }
     }
 }
