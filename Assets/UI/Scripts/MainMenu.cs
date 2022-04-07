@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
     public Button quit;
     public Button backToMenu;
 
+    [Header("Game Object")]
+    [Space]
+    public GameObject Gameover;
+
     void Start()
     {
         playGame.onClick.AddListener(StartGame);
@@ -24,16 +28,17 @@ public class MainMenu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        Debug.Log("Saliendo");
+        //Application.Quit();
     }
 
     public void StartGame()
     {
         SceneManager.LoadScene(1);
+        Time.timeScale = 1; 
     }
     public void BackToMenu()
     {
-        AudioManager.instance.backgroundGamePlay.Stop(); 
         SceneManager.LoadScene(0);
     }
 

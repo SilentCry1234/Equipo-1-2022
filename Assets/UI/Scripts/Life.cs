@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Life : MonoBehaviour
 {
@@ -10,6 +12,26 @@ public class Life : MonoBehaviour
     public float time;
     
     public GameObject lost;
+
+    public bool isDead;
+
+    public static Life instance; 
+
+    public AudioSource corte; 
+    public AudioSource muerte;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if( instance != this )
+        {
+            Destroy(instance.gameObject);
+            instance = this; 
+        }
+    }
 
     private void Update()
     {
@@ -23,7 +45,6 @@ public class Life : MonoBehaviour
             takeDamage = true;
             time = 0f;
         }
-        CheckLife();
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -33,7 +54,13 @@ public class Life : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemigo"))
             {
                 vidas -= 1;
+                corte.Play(); 
                 Contenedorr.contenedores.ReducirVida();
+            }
+            if (vidas <= 0)
+            {
+                isDead = true;
+                StartCoroutine(CartelMuerte());
             }
         }
         takeDamage = false;
@@ -44,11 +71,20 @@ public class Life : MonoBehaviour
         time += Time.deltaTime;
     }
 
-    private void CheckLife()
+    IEnumerator CartelMuerte()
     {
-        if (vidas <= 0 )
+        if (isDead)
         {
-            lost.SetActive(true);            
+            Time.timeScale = 0;
+            lost.SetActive(true);
+
+            AudioManager.instance.backgroundGamePlay.Stop();
+
+            while (lost.GetComponent<CanvasGroup>().alpha < 1f)
+            {
+                lost.GetComponent<CanvasGroup>().alpha += 0.005f;
+                yield return new WaitForSecondsRealtime(0.01f);
+            }
         }
     }
 }

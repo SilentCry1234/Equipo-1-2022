@@ -23,7 +23,6 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        PlayAudio(backgroundGamePlay);
 
     }
 
