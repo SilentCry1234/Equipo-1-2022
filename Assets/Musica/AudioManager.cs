@@ -10,8 +10,7 @@ public class AudioManager : MonoBehaviour
 {
     public AudioMixer musicMixer, effectsMixer;
     [Space]
-    public AudioSource backgroundGamePlay, backgroundMenu, PlayerDeath;
-
+    public AudioSource backgroundGamePlay, backgroundMenu, PlayerDeath, PlayerDamage; 
     public static AudioManager instance; 
 
     private void Awake()
@@ -24,7 +23,7 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-
+        PlayAudio(backgroundGamePlay);
 
     }
 
