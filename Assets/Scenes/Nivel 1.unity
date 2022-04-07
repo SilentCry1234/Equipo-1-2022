@@ -1312,6 +1312,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 764537042}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &843669936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1659,7 +1671,6 @@ MonoBehaviour:
   creditos: {fileID: 0}
   quit: {fileID: 0}
   backToMenu: {fileID: 2058464387}
-  lost: {fileID: 0}
 --- !u!114 &1046751085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2576,7 +2587,7 @@ GameObject:
   - component: {fileID: 1827588835}
   - component: {fileID: 1827588834}
   m_Layer: 0
-  m_Name: Text (Legacy)
+  m_Name: Txt_Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3021,7 +3032,6 @@ MonoBehaviour:
   creditos: {fileID: 0}
   quit: {fileID: 0}
   backToMenu: {fileID: 2132155069}
-  lost: {fileID: 764537042}
 --- !u!114 &2002242843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3529,6 +3539,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: BackToMenu
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 764537042}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
