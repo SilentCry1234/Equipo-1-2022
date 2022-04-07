@@ -473,7 +473,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2901,7 +2901,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   semillasobject: {fileID: 8125885900308953968, guid: c493c2e55ef73c14da3c44df18b6095f, type: 3}
   spawn: {fileID: 1950108297}
-  Espada: {fileID: 1838425254}
   distancia_deAct: 8
   delaySpawn: 0.5
   delayRonda: 2
@@ -2917,8 +2916,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba247044a535d104e9da85da38e77607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  VelRotar: 0.5
-  Personaje_principal: {fileID: 1838425254}
+  VelRotar: 500
 --- !u!1 &2002242840
 GameObject:
   m_ObjectHideFlags: 0

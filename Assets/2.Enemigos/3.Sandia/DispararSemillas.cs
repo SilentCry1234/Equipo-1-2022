@@ -7,7 +7,7 @@ public class DispararSemillas : MonoBehaviour
     [Header("GameObjects")]
     public GameObject semillasobject;
     public GameObject spawn;
-    [SerializeField] GameObject Espada;
+    ControladorPersonaje Espada;
     [Space]
     [Header("Distancia")]
     [SerializeField] float distancia_deAct;
@@ -18,6 +18,10 @@ public class DispararSemillas : MonoBehaviour
     private float proxRonda = 0.0f;
     private float proximoSpawn = 0.0f;
 
+    private void Start()
+    {
+        Espada = FindObjectOfType<ControladorPersonaje>(); 
+    }
 
 
     void Update()

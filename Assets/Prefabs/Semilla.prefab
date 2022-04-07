@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -2313790592997309297}
   m_Layer: 0
   m_Name: Semilla
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,8 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f044902326bafff4495e7211bf734d5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Espada: {fileID: 0}
-  CuentaRegDestruir: 10
+  CuentaRegDestruir: 5
 --- !u!114 &-2313790592997309297
 MonoBehaviour:
   m_ObjectHideFlags: 0

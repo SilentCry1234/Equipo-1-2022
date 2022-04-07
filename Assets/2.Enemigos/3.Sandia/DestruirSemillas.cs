@@ -4,12 +4,8 @@ using UnityEngine;
 
 public class DestruirSemillas : MonoBehaviour
 {
-    public GameObject Espada;
+    //public GameObject Espada;
     public float CuentaRegDestruir;
-    private void Start()
-    {
-        
-    }
 
     private void Update()
     {
@@ -22,12 +18,13 @@ public class DestruirSemillas : MonoBehaviour
         Destroy(this.gameObject, CuentaRegDestruir);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<MovimientoPersonaje>())
+        Debug.Log("Chocando");
+        if (collision.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
-
+            Destroy(gameObject);
+            
         }
     }
 }
