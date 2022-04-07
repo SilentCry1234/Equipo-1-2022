@@ -11,6 +11,7 @@ public class MovimientoPersonaje : MonoBehaviour
     //Direcciones 
     private float Vertical;
     private float Horizontal;
+    private Vector2 moveInput; 
 
     //Componentes
     private Rigidbody2D rg2D;
@@ -32,8 +33,10 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         Horizontal = Input.GetAxisRaw("Horizontal");
         Vertical = Input.GetAxisRaw("Vertical");
+        moveInput = new Vector2(Horizontal, Vertical).normalized;
 
-        rg2D.velocity = new Vector2(Horizontal * Velocidad, Vertical * Velocidad);
+        //rg2D.velocity = new Vector2(Horizontal * Velocidad, Vertical * Velocidad).normalized;
+        rg2D.MovePosition(rg2D.position + moveInput * Velocidad * Time.fixedDeltaTime); 
     }
 
     private void animaciones()

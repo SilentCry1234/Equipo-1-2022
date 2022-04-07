@@ -11,8 +11,6 @@ public class MainMenu : MonoBehaviour
     public Button quit;
     public Button backToMenu;
 
-    
-
     void Start()
     {
         playGame.onClick.AddListener(StartGame);
@@ -35,13 +33,12 @@ public class MainMenu : MonoBehaviour
     }
     public void BackToMenu()
     {
+        AudioManager.instance.backgroundGamePlay.Stop(); 
         SceneManager.LoadScene(0);
-       
     }
 
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
-        
     }
 }
