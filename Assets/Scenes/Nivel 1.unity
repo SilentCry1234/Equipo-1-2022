@@ -1408,7 +1408,7 @@ Transform:
   - {fileID: 1541480252}
   - {fileID: 477045485}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &458838987
 GameObject:
@@ -1999,7 +1999,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &737134325
 Rigidbody2D:
@@ -2703,7 +2703,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 045844902d0a84347a823c1a557e37dc, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3e0b09f2cf216a4498f43a2bea501c7d, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -2826,7 +2826,7 @@ Transform:
   - {fileID: 902394191}
   - {fileID: 1192886542}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1044473795
 GameObject:
@@ -5300,6 +5300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca13c7022d8ed254f81c5a6e117536e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enmermelada: 0
 --- !u!114 &1838425258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5314,7 +5315,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nombre: Espadita
   enmantel: 0
-  enmermelada: 0
 --- !u!50 &1838425260
 Rigidbody2D:
   serializedVersion: 4
@@ -5354,7 +5354,6 @@ MonoBehaviour:
   lost: {fileID: 764537042}
   isDead: 0
   corte: {fileID: 1838425265}
-  muerte: {fileID: 0}
 --- !u!95 &1838425262
 Animator:
   serializedVersion: 4

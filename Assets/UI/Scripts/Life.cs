@@ -18,7 +18,6 @@ public class Life : MonoBehaviour
     public static Life instance; 
 
     public AudioSource corte; 
-    public AudioSource muerte;
 
     private void Awake()
     {
