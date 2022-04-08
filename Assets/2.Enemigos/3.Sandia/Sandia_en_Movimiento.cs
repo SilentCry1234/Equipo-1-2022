@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Sandia_en_Movimiento : MonoBehaviour
 {
+    public float checkearRadio;
+
+    public bool DeberiaRotar;
+
+    public LayerMask elPlayer;
+
+    private Transform target;
+    private Animator anim;
+    public Vector3 dir;
+
+    private bool Esta_aRango_dePersecucion;
     public float velocidadenemiga;
     private float parado = 0f;
     public float limite;
@@ -15,14 +26,36 @@ public class Sandia_en_Movimiento : MonoBehaviour
 
     void Start()
     {
-
+        anim = GetComponentInChildren<Animator>();
+        target = GameObject.FindWithTag("Player").transform;
         Personaje_principal = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
 
     }
 
     void Update()
     {
+        anim.SetBool("isRunning", Esta_aRango_dePersecucion);
+        Esta_aRango_dePersecucion = Physics2D.OverlapCircle(transform.position, checkearRadio, elPlayer);
 
+
+        dir = target.position - transform.position;
+        dir.Normalize();
+        if (activarparado == true)
+        {
+            anim.SetFloat("x", dir.x);
+            anim.SetFloat("y", dir.y);
+
+        }
+        else
+        {
+            if (DeberiaRotar)
+            {
+                anim.SetFloat("X", dir.x);
+                anim.SetFloat("Y", dir.y);
+
+            }
+        }
         if (Personaje_principal == null)
         {
             return;

@@ -25,7 +25,7 @@ public class AnimacionesEnemigos : MonoBehaviour
     }
     private void Update()
     {
-        anim.SetBool("isRunning", Esta_aRango_dePersecucion);
+        anim.SetBool("is    Running", Esta_aRango_dePersecucion);
         Esta_aRango_dePersecucion = Physics2D.OverlapCircle(transform.position, checkearRadio, elPlayer);
 
 

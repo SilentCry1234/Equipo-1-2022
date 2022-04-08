@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestruccionEnemigo : MonoBehaviour
 {
     public float CuentaRegDestruir;
-    [SerializeField] private AudioSource muerteFruta; 
+    //[SerializeField] private AudioSource muerteFruta; 
 
     private void Update()
     {
@@ -14,7 +14,7 @@ public class DestruccionEnemigo : MonoBehaviour
 
     public void Destruccion()
     {
-        muerteFruta.Play(); 
+        //muerteFruta.Play(); 
         Destroy(this.gameObject, CuentaRegDestruir);
     }
 
@@ -22,7 +22,7 @@ public class DestruccionEnemigo : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<ControladorPersonaje>())
         {
-            muerteFruta.Play();
+            //muerteFruta.Play();
             Destroy(this.gameObject);
         }
     }

@@ -16,7 +16,9 @@ public class Life : MonoBehaviour
     public static Life instance; 
 
     public AudioSource corte; 
-    public AudioSource muerte; 
+    public AudioSource muerte;
+    public AudioSource Impacto;
+    public AudioClip SonidoMuerteFruta;
 
 
     private void Awake()
@@ -48,6 +50,7 @@ public class Life : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        Impacto.Play();
         if (takeDamage == true)
         {
             if (collision.gameObject.CompareTag("Enemigo"))
@@ -55,6 +58,7 @@ public class Life : MonoBehaviour
                 vidas -= 1;
                 Contenedorr.contenedores.ReducirVida();
                 corte.Play();
+                
                 Debug.Log(vidas);
             }
             if (vidas <= 0)
@@ -63,6 +67,7 @@ public class Life : MonoBehaviour
                 isDead = true;
                 StartCoroutine(CartelMuerte());
             }
+            
         }
         takeDamage = false;
     }
