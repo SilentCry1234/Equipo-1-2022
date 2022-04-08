@@ -6,7 +6,8 @@ public class MovimientoPersonaje : MonoBehaviour
 {
     [Header("Velocidad")]
     [Space]
-    private float Velocidad = 7; 
+    private float Velocidad = 7;
+    public bool enmermelada;
 
     //Direcciones 
     private float Vertical;
@@ -27,6 +28,7 @@ public class MovimientoPersonaje : MonoBehaviour
     {
         movimiento();
         animaciones();
+        Reducirvelocidad();
     }
     private void movimiento()
     {
@@ -74,6 +76,33 @@ public class MovimientoPersonaje : MonoBehaviour
         else
         {
             Animator.SetBool("Camina derecha", false);
+        }
+    }
+    public void Reducirvelocidad()
+    {
+        if (enmermelada == true)
+        {
+            Velocidad = 2f;
+        }
+
+        if (enmermelada == false)
+        {
+            Velocidad = 7f;
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mermelada"))
+        {
+            enmermelada = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Mermelada"))
+        {
+            enmermelada = false;
         }
     }
 }
