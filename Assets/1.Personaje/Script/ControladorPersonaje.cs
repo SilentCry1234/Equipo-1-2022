@@ -7,7 +7,7 @@ public class ControladorPersonaje : MonoBehaviour
     [Header("Caracteristicas")]
     [Space]
     public string nombre;
-    public float speed;
+    //private float speed = 7;
     public bool enmantel;
     public bool enmermelada;
 

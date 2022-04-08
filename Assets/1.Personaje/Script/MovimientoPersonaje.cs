@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class MovimientoPersonaje : MonoBehaviour
 {
-    [Header ("Velocidad")]
+    [Header("Velocidad")]
     [Space]
-    private float Velocidad;
+    private float Velocidad = 7; 
 
     //Direcciones 
     private float Vertical;
@@ -19,7 +19,6 @@ public class MovimientoPersonaje : MonoBehaviour
 
     void Start()
     {
-        Velocidad = ControladorPersonaje.instace.speed;
         rg2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
     }
