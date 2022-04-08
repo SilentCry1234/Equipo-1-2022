@@ -183,7 +183,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: f7ae5a1b811e87c48aa44476e97b25bf, type: 3}
-    m_FontSize: 26
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -194,9 +194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CREDITS
-
-'
+  m_Text: CREDITS
 --- !u!222 &81152782
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -902,11 +900,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1783700414}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -366.22998, y: 155.56888}
+  m_AnchoredPosition: {x: -373, y: 200}
   m_SizeDelta: {x: -967.1211, y: -502.0485}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &828886250
@@ -942,7 +940,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CREDITS
+  m_Text: 'CREDITS:
+
+
+
+
+
 
 '
 --- !u!222 &828886251
@@ -1157,6 +1160,7 @@ MonoBehaviour:
   creditos: {fileID: 0}
   quit: {fileID: 1330055087}
   backToMenu: {fileID: 0}
+  controladorl: {fileID: 0}
   Gameover: {fileID: 0}
 --- !u!1 &1182673859
 GameObject:
@@ -1185,7 +1189,7 @@ RectTransform:
   m_GameObject: {fileID: 1182673859}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3375, y: 1.5001, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1783700414}
@@ -1265,11 +1269,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1783700414}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -362.45, y: -8.6648}
+  m_AnchoredPosition: {x: -363, y: -9}
   m_SizeDelta: {x: -861.4018, y: -253.4811}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233316031
@@ -1305,10 +1309,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'NAME DEVELOPERS
-
-
-'
+  m_Text: "NAME DEVELOPERS\n\nJESUS GARCIA FUSI\r\nST\xC9FANO GAMBINO\r\nIGNACIO
+    RODRIGUEZ\r\nFRANCO INGRASSIA \r\nMARTIN GRUGNALETT\r\nAGUSTIN ESCOBAL\r\nCARLOS
+    FRANCISCO \r\nDAVOR AGNIC\r\nFERNANDO BERGAZ\r\nJONATHAN CALICCHIO\r\nJUANA BRAVO
+    \r\nGUILIANA MAZA\r\nJOAQUIN BURGOS\r\nJOAQUIN ETURA\r\nMAURO DELICIO\r\nFANCISCO
+    CORRALES \r\nFRANCISCO BUJ\r\nAGUSTIN PARENTI"
 --- !u!222 &1233316032
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1661,7 +1666,7 @@ RectTransform:
   m_GameObject: {fileID: 1527606634}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.50125, y: 2.1553125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 161748105}
@@ -1670,7 +1675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -366.23, y: -173.3964}
+  m_AnchoredPosition: {x: -370, y: -325}
   m_SizeDelta: {x: 126.33, y: 31.6965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1669197089
@@ -1818,7 +1823,7 @@ RectTransform:
   m_GameObject: {fileID: 1770519879}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5, y: 1.4375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1783700414}
@@ -1961,8 +1966,8 @@ RectTransform:
   m_Children:
   - {fileID: 1182673860}
   - {fileID: 1770519880}
-  - {fileID: 1233316030}
   - {fileID: 828886249}
+  - {fileID: 1233316030}
   - {fileID: 1527606638}
   m_Father: {fileID: 0}
   m_RootOrder: 1
