@@ -16,6 +16,8 @@ public class Life : MonoBehaviour
     public static Life instance; 
 
     public AudioSource corte; 
+    public AudioSource muerte; 
+
 
     private void Awake()
     {
@@ -57,6 +59,7 @@ public class Life : MonoBehaviour
             }
             if (vidas <= 0)
             {
+                muerte.Play(); 
                 isDead = true;
                 StartCoroutine(CartelMuerte());
             }
