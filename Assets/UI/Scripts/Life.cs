@@ -41,7 +41,7 @@ public class Life : MonoBehaviour
             Timer();
         } 
 
-        if (time >= 3f)
+        if (time >= 1f)
         {
             takeDamage = true;
             time = 0f;
@@ -62,8 +62,7 @@ public class Life : MonoBehaviour
                 Debug.Log(vidas);
             }
             if (vidas <= 0)
-            {
-                muerte.Play(); 
+            { 
                 isDead = true;
                 StartCoroutine(CartelMuerte());
             }
@@ -81,6 +80,7 @@ public class Life : MonoBehaviour
     {
         if (isDead)
         {
+            muerte.Play();
             Time.timeScale = 0;
             lost.SetActive(true);
 
