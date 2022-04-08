@@ -1039,7 +1039,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7787114, y: 1}
+    m_SensorSize: {x: 1.7786459, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -5215,7 +5215,7 @@ GameObject:
   - component: {fileID: 1838425264}
   - component: {fileID: 1838425263}
   - component: {fileID: 1838425265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Espadita
   m_TagString: Player
   m_Icon: {fileID: 0}

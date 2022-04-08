@@ -5,7 +5,7 @@ using UnityEngine;
 public class ManzanaSiguiendoEspada : MonoBehaviour
 {
     public float velocidadenemiga;
-    public float velocidadDeRotacion; 
+    //public float velocidadDeRotacion; 
     // Variable para guardar al jugador
     [SerializeField] Transform Personaje_principal = null;
     void Start()
