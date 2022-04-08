@@ -35,27 +35,22 @@ public class Sandia_en_Movimiento : MonoBehaviour
 
     void Update()
     {
-        anim.SetBool("isRunning", Esta_aRango_dePersecucion);
+        anim.SetBool("is Chasing", Esta_aRango_dePersecucion);
         Esta_aRango_dePersecucion = Physics2D.OverlapCircle(transform.position, checkearRadio, elPlayer);
 
 
         dir = target.position - transform.position;
         dir.Normalize();
-        if (activarparado == true)
+ 
+        
+       
+        if (DeberiaRotar)
         {
-            anim.SetFloat("x", dir.x);
-            anim.SetFloat("y", dir.y);
+            anim.SetFloat("X", dir.x);
+            anim.SetFloat("Y", dir.y);
 
         }
-        else
-        {
-            if (DeberiaRotar)
-            {
-                anim.SetFloat("X", dir.x);
-                anim.SetFloat("Y", dir.y);
-
-            }
-        }
+       
         if (Personaje_principal == null)
         {
             return;

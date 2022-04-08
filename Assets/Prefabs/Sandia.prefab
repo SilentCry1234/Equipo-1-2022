@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkearRadio: 10
-  DeberiaRotar: 0
+  DeberiaRotar: 1
   elPlayer:
     serializedVersion: 2
     m_Bits: 64

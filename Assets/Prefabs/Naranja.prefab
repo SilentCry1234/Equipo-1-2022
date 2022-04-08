@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7398971315483844786}
   - component: {fileID: 6814327986976795080}
   - component: {fileID: 6455040821466639920}
-  - component: {fileID: 966604178243952265}
+  - component: {fileID: 3431004124023412832}
   - component: {fileID: -1839765007813155360}
   - component: {fileID: -7138183978086319214}
   m_Layer: 0
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CuentaRegDestruir: 7
---- !u!114 &966604178243952265
+--- !u!114 &3431004124023412832
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3155469423300574113}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0bc0686447311c418d594713f6ededc, type: 3}
+  m_Script: {fileID: 11500000, guid: 651dce3dd0e659d408312bae3671d47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   checkearRadio: 10
@@ -262,14 +262,14 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 1996992802, guid: 113ab5a979e3ca949bdc1b613af430f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.04, y: 1.12}
+  m_Size: {x: 1.28, y: 1.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

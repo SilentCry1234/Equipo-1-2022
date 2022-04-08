@@ -17,8 +17,8 @@ public class Life : MonoBehaviour
 
     public AudioSource corte; 
     public AudioSource muerte;
-    public AudioSource Impacto;
-    public AudioClip SonidoMuerteFruta;
+    //public AudioSource Impacto;
+    //public AudioClip SonidoMuerteFruta;
 
 
     private void Awake()
@@ -50,16 +50,17 @@ public class Life : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Impacto.Play();
+        //Impacto.Play();
         if (takeDamage == true)
         {
             if (collision.gameObject.CompareTag("Enemigo"))
             {
                 vidas -= 1;
+             
                 Contenedorr.contenedores.ReducirVida();
                 corte.Play();
                 
-                Debug.Log(vidas);
+
             }
             if (vidas <= 0)
             { 

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimacionesEnemigos : MonoBehaviour
+public class AnimacionNaranjito : MonoBehaviour
 {
     public float checkearRadio;
 
@@ -25,9 +25,9 @@ public class AnimacionesEnemigos : MonoBehaviour
     }
     private void Update()
     {
-        anim.SetBool("isRunning", Esta_aRango_dePersecucion);
+        anim.SetBool("is Moving", Esta_aRango_dePersecucion);
         Esta_aRango_dePersecucion = Physics2D.OverlapCircle(transform.position, checkearRadio, elPlayer);
-
+        
 
         dir = target.position - transform.position;
         dir.Normalize();
