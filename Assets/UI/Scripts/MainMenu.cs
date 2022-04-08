@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
     public Button creditos;
     public Button quit;
     public Button backToMenu;
+    public Life controladorl;
 
     [Header("Game Object")]
     [Space]
@@ -17,6 +18,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        controladorl = FindObjectOfType<Life>();
         playGame.onClick.AddListener(StartGame);
         quit.onClick.AddListener(QuitGame);
     }
@@ -29,7 +31,7 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Saliendo");
-        //Application.Quit();
+        Application.Quit();
     }
 
     public void StartGame()
@@ -44,6 +46,7 @@ public class MainMenu : MonoBehaviour
 
     public void RestartGame()
     {
+        controladorl.vidas = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
     }
 }

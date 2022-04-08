@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 
 public class Life : MonoBehaviour
 {
-    public static int vidas = 3;
-    public int vidaa;
+    public int vidas = 3;
     public bool takeDamage;
     public float time;
     
@@ -53,8 +51,9 @@ public class Life : MonoBehaviour
             if (collision.gameObject.CompareTag("Enemigo"))
             {
                 vidas -= 1;
-                corte.Play(); 
                 Contenedorr.contenedores.ReducirVida();
+                corte.Play();
+                Debug.Log(vidas);
             }
             if (vidas <= 0)
             {
