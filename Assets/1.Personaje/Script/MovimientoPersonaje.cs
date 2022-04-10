@@ -42,7 +42,7 @@ public class MovimientoPersonaje : MonoBehaviour
 
     private void animaciones()
     {
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
         {
             Animator.SetBool("Camina para atras", true); 
         }
@@ -51,7 +51,7 @@ public class MovimientoPersonaje : MonoBehaviour
             Animator.SetBool("Camina para atras", false);
         }
 
-        if(Input.GetKey(KeyCode.W))
+        if(Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             Animator.SetBool("Camina de frente", true);
         }
@@ -60,7 +60,7 @@ public class MovimientoPersonaje : MonoBehaviour
             Animator.SetBool("Camina de frente", false);
         }
 
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             Animator.SetBool("Camina izquierda", true);
         }
@@ -69,7 +69,7 @@ public class MovimientoPersonaje : MonoBehaviour
             Animator.SetBool("Camina izquierda", false);
         }
 
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             Animator.SetBool("Camina derecha", true);
         }
